@@ -36,7 +36,7 @@ async function update(req, res) {
 
     res.status(200).send({ Menssagem: 'Produto atualizado com sucesso!' })
   } catch (error) {
-    res.status(200).send({ Menssagem: 'Produto errado!' })
+    res.status(200).send({ Menssagem: ' erro Produto não atualizado!' })
   }
 }
 

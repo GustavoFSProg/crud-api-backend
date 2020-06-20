@@ -7,10 +7,7 @@ import path from 'path'
 
 dotenv.config()
 
-const CONNECTION_STRING =
-  'mongodb+srv://gustavo:jogu3340@cluster0-z94zt.mongodb.net/crud-api?retryWrites=true&w=majority'
-
-mongoose.connect(CONNECTION_STRING)
+mongoose.connect(process.env.CONNECTION_STRING)
 
 const app = express()
 app.use(express.json())
@@ -22,7 +19,7 @@ app.use(
   express.static(path.resolve(__dirname, '..', 'uploads', 'resized'))
 )
 
-const PORT = 3000
+const { PORT } = process.env
 
 app.listen(PORT)
 
