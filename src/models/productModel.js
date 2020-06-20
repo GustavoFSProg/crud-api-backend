@@ -1,18 +1,16 @@
 import { Schema, model } from 'mongoose'
 
-const schema = new Schema({
-  title: {
-    type: String,
+const schema = new Schema(
+  {
+    title: String,
+    description: String,
+
+    price: Number,
+    image: String,
   },
-  description: {
-    type: String,
-  },
-  price: {
-    type: Number,
-  },
-  image: {
-    type: String,
-  },
-})
+  {
+    timestamps: true,
+  }
+)
 
 export default model('productModel', schema)
