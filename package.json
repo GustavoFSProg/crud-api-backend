@@ -1,0 +1,40 @@
+{
+  "name": "crud-api-backend",
+  "version": "1.0.0",
+  "description": "This repository is to create a products crud in Node js and after that  create React frontend",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon --exec babel-node src/index.js",
+    "start": "NODE_ENV=production node dist",
+    "build": "babel src -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GustavoFSProg/crud-api-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GustavoFSProg/crud-api-backend/issues"
+  },
+  "homepage": "https://github.com/GustavoFSProg/crud-api-backend#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-node": "0.0.1-security",
+    "babel-preset-env": "^1.7.0",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {
+    "eslint": "^7.3.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5"
+  }
+}
