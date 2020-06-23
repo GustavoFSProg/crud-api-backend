@@ -1,8 +1,7 @@
-import routeProductList from '../routes/productRote'
-import productModel from '../models/productModel'
 import fs from 'fs'
 import sharp from 'sharp'
 import path from 'path'
+import productModel from '../models/productModel'
 
 async function getAll(req, res) {
   try {
@@ -42,7 +41,7 @@ async function update(req, res) {
 
 async function deleteAll(req, res) {
   try {
-    const data = await productModel.deleteMany()
+    await productModel.deleteMany()
     res.status(200).send({ Mensagem: 'Tudo apagado' })
   } catch (error) {
     res.status(400).send({ Mensagem: 'ERRO ao apagar!' })
@@ -53,8 +52,6 @@ async function store(req, res) {
   try {
     const { title, price, description } = req.body
     const { filename: image } = req.file
-
-    console.log(req.file)
 
     const [name] = image.split('.')
     const filename = `${name}.jpg`
